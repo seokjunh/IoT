@@ -1,0 +1,46 @@
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(7,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(9,OUTPUT);
+  pinMode(10,OUTPUT);
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int val = analogRead(A0);
+  int val1 = analogRead(A1);
+  int val2 = analogRead(A2);
+  int val3 = analogRead(A3);
+  if (val > 20){
+    digitalWrite(7,HIGH);
+    delay(300);
+    digitalWrite(7,LOW);
+  }
+  if (val1 > 20){
+    digitalWrite(8,HIGH);
+    delay(300);
+    digitalWrite(8,LOW);
+  }
+  if (val2 > 20){
+    digitalWrite(9,HIGH);
+    delay(300);
+    digitalWrite(9,LOW);
+  }
+  if (val3 > 20){
+    digitalWrite(10,HIGH);
+    delay(300);
+    digitalWrite(10,LOW);
+  }
+  Serial.print(val, DEC);
+  Serial.print(",");
+  Serial.print(val1, DEC);
+  Serial.print(",");
+  Serial.print(val2, DEC);
+  Serial.print(",");
+  Serial.print(val3, DEC);
+  Serial.print("\n");
+  delay(300);
+}
