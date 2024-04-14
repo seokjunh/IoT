@@ -1,3 +1,5 @@
+#라즈베리파이에서 실행
+
 import io
 import picamera
 import threading

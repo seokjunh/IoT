@@ -1,3 +1,5 @@
+# 라즈베리파이에서 실행
+
 from fastapi import FastAPI, WebSocket
 from fastapi.responses import HTMLResponse
 import serial
